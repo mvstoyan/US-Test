@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project U.S.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+</head>
+<body>
+    <section id="header">
+    <h1>U.S. Citizenship Practice Test 2022</h1>
+</section>
+
+<div id="container-countdown">
+
+    <div id="buttons">
+    <button id="start">start</button>
+
+    <div id="time">
+        <p id="countdown">30 : 00</p>
+    </div>
+
+    <button id="pause">pause</button>
+    </div>
+
+    <audio id="player" autoplay loop>
+        <source src="1.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+
+    <form>
+        <div class="question">
+            <label>What is the supreme law of the land?</label>
+            <span><input type="radio" name="question1">The Supreme Court</span>
+            <span><input type="radio" name="question1">The Bill of Rights</span>
+            <span><input type="radio" name="question1">The Declaration of Independence</span>
+            <span><input type="radio" name="question1" id="answer1">The Constitution</span>
+            <p id="show1"></p>
+        </div>
+        <div class="question">
+            <label>How many amendments does the Constitution have?</label>
+            <span><input type="radio" name="question2">10</span>
+            <span><input type="radio" name="question2" id="answer2">27</span>
+            <span><input type="radio" name="question2">102</span>
+            <span><input type="radio" name="question2">5</span>
+            <p id="show2"></p>
+        </div>
+        <div class="question">
+            <label>What is the name of the current Vice President of the United States?</label>
+            <span><input type="radio" name="question3" id="answer3">Kamala Harris</span>
+            <span><input type="radio" name="question3">Kellyanne Conway</span>
+            <span><input type="radio" name="question3">Joe Biden</span>
+            <span><input type="radio" name="question3">Mitch McConnell</span>
+            <p id="show3"></p>
+        </div>
+        <div class="question">
+            <label>What is the economic system in the United States?</label>
+            <span><input type="radio" name="question4">Marxist economy</span>
+            <span><input type="radio" name="question4">Communist economy</span>
+            <span><input type="radio" name="question4">Socialist economy</span>
+            <span><input type="radio" name="question4" id="answer4">Capitalism</span>
+            <p id="show4"></p>
+        </div>
+        <div class="question">
+            <label>The President of the United States is elected for how many years?</label>
+            <span><input type="radio" name="question5">2</span>
+            <span><input type="radio" name="question5">6</span>
+            <span><input type="radio" name="question5" id="answer5">4</span>
+            <span><input type="radio" name="question5">8</span>
+            <p id="show5"></p>
+        </div>
+        <div class="question">
+            <label>Who vetoes bills?</label>
+            <span><input type="radio" name="question6">A Member of Congress</span>
+            <span><input type="radio" name="question6" id="answer6">The President</span>
+            <span><input type="radio" name="question6">Supreme Court Justices.</span>
+            <span><input type="radio" name="question6">All of the above</span>
+            <p id="show6"></p>
+        </div>
+        <div class="question">
+            <label>What is the highest court in the United States?</label>
+            <span><input type="radio" name="question7" id="answer7">The Supreme Court</span>
+            <span><input type="radio" name="question7">The Court of Appeals</span>
+            <span><input type="radio" name="question7">The District Court</span>
+            <span><input type="radio" name="question7">The Federal Court</span>
+            <p id="show7"></p>
+        </div>
+        <div class="question">
+            <label>What do we show loyalty to when we say the Pledge of Allegiance?</label>
+            <span><input type="radio" name="question8">Our ancestors</span>
+            <span><input type="radio" name="question8">The President</span>
+            <span><input type="radio" name="question8" id="answer8">The flag</span>
+            <span><input type="radio" name="question8">The founding fathers</span>
+            <p id="show8"></p>
+        </div>
+        <div class="question">
+            <label>Who wrote the Declaration of Independence?</label>
+            <span><input type="radio" name="question9">George Washington</span>
+            <span><input type="radio" name="question9" id="answer9">Thomas Jefferson</span>
+            <span><input type="radio" name="question9">James Madison</span>
+            <span><input type="radio" name="question9">John Adams</span>
+            <p id="show9"></p>
+        </div>
+        <div class="question">
+            <label>Martin Luther King, Jr. is famous for many things. Name one.</label>
+            <span><input type="radio" name="question10">First black President</span>
+            <span><input type="radio" name="question10">Opened a university</span>
+            <span><input type="radio" name="question10">All of the above</span>
+            <span><input type="radio" name="question10" id="answer10">Fought for civil rights</span>
+            <p id="show10"></p>
+        </div>
+        <div class="question">
+            <label>What major event happened on September 11, 2001 in the United States?</label>
+            <span><input type="radio" name="question11">The U.S. declared war on Syria</span>
+            <span><input type="radio" name="question11" id="answer11">The U.S. was attacked by terrorists</span>
+            <span><input type="radio" name="question11">Both a and b</span>
+            <span><input type="radio" name="question11">None of the above</span>
+            <p id="show11"></p>
+        </div>
+        <div class="question">
+            <label>Why does the flag have 13 stripes?</label>
+            <span><input type="radio" name="question12">For the first 13 presidents</span>
+            <span><input type="radio" name="question12">For 13 wars fought</span>
+            <span><input type="radio" name="question12">For 13 of the top U.S. generals</span>
+            <span><input type="radio" name="question12" id="answer12">Because there were 13 original colonies</span>
+            <p id="show12"></p>
+        </div>
+        <div class="question">
+            <label>Name three national U.S. holidays.</label>
+            <span><input type="radio" name="question13">CCaesar Chavez Day, Easter, Christmas</span>
+            <span><input type="radio" name="question13">Mother's Day, Father’s Day, Labor Day</span>
+            <span><input type="radio" name="question13" id="answer13">Independence Day, Martin Luther King, Jr. Day, and Veterans Day</span>
+            <span><input type="radio" name="question13">Civil Rights Day, Declaration of Independence Day, Easter</span>
+            <p id="show13"></p>
+        </div>
+        <div class="question">
+            <label>George Washington is famous for many things. Name one.</label>
+            <span><input type="radio" name="question14">Father of our country</span>
+            <span><input type="radio" name="question14" id="answer14">All of the above</span>
+            <span><input type="radio" name="question14">General of the Continental Army</span>
+            <span><input type="radio" name="question14">First President</span>
+            <p id="show14"></p>
+        </div>
+        <div class="question">
+            <label>Who lived in America before the Europeans arrived?</label>
+            <span><input type="radio" name="question15" id="answer15">Native Americans</span>
+            <span><input type="radio" name="question15">Canadians</span>
+            <span><input type="radio" name="question15">Colonists</span>
+            <span><input type="radio" name="question15">Vikings</span>
+            <p id="show15"></p>
+        </div>
+        <div class="question">
+            <label>Abraham Lincoln is famous for many things. Name one.</label>
+            <span><input type="radio" name="question16" id="answer16">All of the above</span>
+            <span><input type="radio" name="question16">Led the United States during the Civil War</span>
+            <span><input type="radio" name="question16">Saved (or preserved) the Union</span>
+            <span><input type="radio" name="question16">Freed the slaves (Emancipation Proclamation)</span>
+            <p id="show16"></p>
+        </div>
+        <div class="question">
+            <label>What is the form of government of the United States?</label>
+            <span><input type="radio" name="question17">Communist</span>
+            <span><input type="radio" name="question17" id="answer17">Republic</span>
+            <span><input type="radio" name="question17">Socialist</span>
+            <span><input type="radio" name="question17">Monarchy</span>
+            <p id="show17"></p>
+        </div>
+        <div class="question">
+            <label>How are changes made to the U.S. Constitution?</label>
+            <span><input type="radio" name="question18">President writing new laws</span>
+            <span><input type="radio" name="question18" id="answer18">Amendments</span>
+            <span><input type="radio" name="question18">People voting on the changes</span>
+            <span><input type="radio" name="question18">None of the above</span>
+            <p id="show18"></p>
+        </div>
+        <div class="question">
+            <label>What is the rule of law?</label>
+            <span><input type="radio" name="question19">Only Americans who are naturalized citizens must follow the law</span>
+            <span><input type="radio" name="question19">Everyone must follow the law, except government leaders</span>
+            <span><input type="radio" name="question19" id="answer19">Everyone must follow the law, leaders and government must obey the law, and no one is above the law</span>
+            <span><input type="radio" name="question19">Only Congress is above the law</span>
+            <p id="show19"></p>
+        </div>
+        <div class="question">
+            <label>The President of the United States is in charge of which branch of government</label>
+            <span><input type="radio" name="question20">Legislative</span>
+            <span><input type="radio" name="question20" id="answer20">Executive</span>
+            <span><input type="radio" name="question20">Judicial</span>
+            <span><input type="radio" name="question20">All 3</span>
+            <p id="show20"></p>
+        </div>
+        <div class="question">
+            <label>How long is a term for a U.S. senator?</label>
+            <span><input type="radio" name="question21">2 years</span>
+            <span><input type="radio" name="question21">4 years</span>
+            <span><input type="radio" name="question21" id="answer21">6 years</span>
+            <span><input type="radio" name="question21">5 years</span>
+            <p id="show21"></p>
+        </div>
+        <div class="question">
+            <label>How many voting members are in the House of Representatives?</label>
+            <span><input type="radio" name="question22">100</span>
+            <span><input type="radio" name="question22" id="answer22">435</span>
+            <span><input type="radio" name="question22">200</span>
+            <span><input type="radio" name="question22">50</span>
+            <p id="show22"></p>
+        </div>
+        <div class="question">
+            <label>Why do U.S. representatives serve shorter terms than U.S. senators?</label>
+            <span><input type="radio" name="question23">To ensure they are close to the President</span>
+            <span><input type="radio" name="question23" id="answer23">To more closely follow public opinion</span>
+            <span><input type="radio" name="question23">To make sure they don’t become too powerful</span>
+            <span><input type="radio" name="question23">They do more work so they cant be in power for longer than U.S. senators</span>
+            <p id="show23"></p>
+        </div>
+        <div class="question">
+            <label>Who does a U.S. senator represent?</label>
+            <span><input type="radio" name="question24">Some people of the state</span>
+            <span><input type="radio" name="question24" id="answer24">Citizens of their state</span>
+            <span><input type="radio" name="question24">The people of the state who belong to their affiliated party</span>
+            <span><input type="radio" name="question24">Everyone in the country</span>
+            <p id="show24"></p>
+        </div>
+        <div class="question">
+            <label>Who is Commander in Chief of the U.S. military?</label>
+            <span><input type="radio" name="question25">The General</span>
+            <span><input type="radio" name="question25" id="answer25">The President</span>
+            <span><input type="radio" name="question25">The Speaker of the House</span>
+            <span><input type="radio" name="question25">The Vice President</span>
+            <p id="show25"></p>
+        </div>
+        <div class="question">
+            <label>What is one part of the judicial branch?</label>
+            <span><input type="radio" name="question26">Federal Court</span>
+            <span><input type="radio" name="question26">Supreme Court</span>
+            <span><input type="radio" name="question26">President's Cabinet</span>
+            <span><input type="radio" name="question26" id="answer26">Both A and B</span>
+            <p id="show26"></p>
+        </div>
+        <div class="question">
+            <label>There are four amendments to the U.S. Constitution about who can vote. Describe one of them.</label>
+            <span><input type="radio" name="question27">Anyone with a driver’s license can vote</span>
+            <span><input type="radio" name="question27">None of the above</span>
+            <span><input type="radio" name="question27">Everyone must register to vote</span>
+            <span><input type="radio" name="question27" id="answer27">Citizens eighteen and older (can vote).</span>
+            <p id="show27"></p>
+        </div>
+        <div class="question">
+            <label>Name one reason why the Americans declared independence from Britain.</label>
+            <span><input type="radio" name="question28">Because of high taxes (taxation without representation)</span>
+            <span><input type="radio" name="question28">Because the British army stayed in their houses (boarding, quartering)</span>
+            <span><input type="radio" name="question28">Because they didn’t have self-government</span>
+            <span><input type="radio" name="question28" id="answer28">All of the above</span>
+            <p id="show28"></p>
+        </div>
+        <div class="question">
+            <label>Alexander Hamilton is famous for many things. Name one.</label>
+            <span><input type="radio" name="question29">Invented the lightbulb</span>
+            <span><input type="radio" name="question29">First Cabinet Member to James Madison</span>
+            <span><input type="radio" name="question29"  id="answer29">First Secretary of Treasury</span>
+            <span><input type="radio" name="question29">None of the above</span>
+            <p id="show29"></p>
+        </div>
+        <div class="question">
+            <label>What U.S. war ended slavery?</label>
+            <span><input type="radio" name="question30">Mexican-American War</span>
+            <span><input type="radio" name="question30">American Revolution</span>
+            <span><input type="radio" name="question30" id="answer30">Civil War</span>
+            <span><input type="radio" name="question30">World War I</span>
+            <p id="show30"></p>
+        </div>
+        <div class="question">
+            <label>Name one leader of the women's rights movement in the 1800s.</label>
+            <span><input type="radio" name="question31">Rosa Parks</span>
+            <span><input type="radio" name="question31" id="answer31">Susan B. Anthony</span>
+            <span><input type="radio" name="question31">Michelle Obama</span>
+            <span><input type="radio" name="question31">All of the above</span>
+            <p id="show31"></p>
+        </div>
+        <div class="question">
+            <label>When did all women get the right to vote?</label>
+            <span><input type="radio" name="question32">1927</span>
+            <span><input type="radio" name="question32">1942</span>
+            <span><input type="radio" name="question32" id="answer32">1920</span>
+            <span><input type="radio" name="question32">1931</span>
+            <p id="show32"></p>
+        </div>
+        <div class="question">
+            <label>Why did the United States enter the Korean War?</label>
+            <span><input type="radio" name="question33">To make sure their territories were safe</span>
+            <span><input type="radio" name="question33" id="answer33">To stop the spread of communism</span>
+            <span><input type="radio" name="question33">To stop the spread of socialism</span>
+            <span><input type="radio" name="question33">All of the above</span>
+            <p id="show33"></p>
+        </div>
+        <div class="question">
+            <label>What group of people was taken and sold as slaves?</label>
+            <span><input type="radio" name="question34">Chinese</span>
+            <span><input type="radio" name="question34">Latinos</span>
+            <span><input type="radio" name="question34">Indians</span>
+            <span><input type="radio" name="question34" id="answer34">Africans</span>
+            <p id="show34"></p>
+        </div>
+        <div class="question">
+            <label>When was the Declaration of Independence adopted?</label>
+            <span><input type="radio" name="question35">July 2nd, 1776</span>
+            <span><input type="radio" name="question35">July 6th, 1776</span>
+            <span><input type="radio" name="question35" id="answer35">July 4th, 1776</span>
+            <span><input type="radio" name="question35">July 8th, 1776</span>
+            <p id="show35"></p>
+        </div>
+        <div class="question">
+            <label>What founding document was written in 1787?</label>
+            <span><input type="radio" name="question36">Declaration of Independence</span>
+            <span><input type="radio" name="question36" id="answer36">U.S. Constitution</span>
+            <span><input type="radio" name="question36">Proclamation Papers</span>
+            <span><input type="radio" name="question36">All of the above</span>
+            <p id="show36"></p>
+        </div>
+        <div class="question">
+            <label>What territory did the United States buy from France in 1803?</label>
+            <span><input type="radio" name="question37" id="answer37">The Louisiana Territory</span>
+            <span><input type="radio" name="question37">The Arizona Territory</span>
+            <span><input type="radio" name="question37">The Nevada Territory</span>
+            <span><input type="radio" name="question37">The New Mexico Territory</span>
+            <p id="show37"></p>
+        </div>
+        <div class="question">
+            <label>What amendment gives citizenship to all persons born in the United States?</label>
+            <span><input type="radio" name="question38">10th Amendment</span>
+            <span><input type="radio" name="question38" id="answer38">14th Amendment</span>
+            <span><input type="radio" name="question38">1st Amendment</span>
+            <span><input type="radio" name="question38">2nd Amendment</span>
+            <p id="show38"></p>
+        </div>
+        <div class="question">
+            <label>When did the Great Depression start?</label>
+            <span><input type="radio" name="question39">Stock market crash of 1933</span>
+            <span><input type="radio" name="question39">Stock market crash of 1931</span>
+            <span><input type="radio" name="question39">Stock market crash of 1927</span>
+            <span><input type="radio" name="question39" id="answer39">Stock market crash of 1929</span>
+            <p id="show39"></p>
+        </div>
+        <div class="question">
+            <label>What did the civil rights movement do?</label>
+            <span><input type="radio" name="question40">Fought to help children get better schooling</span>
+            <span><input type="radio" name="question40" id="answer40">Fought to end racial discrimination</span>
+            <span><input type="radio" name="question40">Fought to create equal pay</span>
+            <span><input type="radio" name="question40">Fought to allow women the right to vote</span>
+            <p id="show40"></p>
+        </div>
+        <div class="question">
+            <label>Name one example of an American innovation.</label>
+            <span><input type="radio" name="question41">Automobile</span>
+            <span><input type="radio" name="question41">Skyscrapers</span>
+            <span><input type="radio" name="question41">Airplane</span>
+            <span><input type="radio" name="question41" id="answer41">All of the above</span>
+            <p id="show41"></p>
+        </div>
+        <div class="question">
+            <label>What is the name of the national anthem?</label>
+            <span><input type="radio" name="question42">The Land of the Free</span>
+            <span><input type="radio" name="question42">The Land</span>
+            <span><input type="radio" name="question42" id="answer42">The Star-Spangled Banner</span>
+            <span><input type="radio" name="question42">The Song of the Forefathers</span>
+            <p id="show42"></p>
+        </div>
+        <div class="question">
+            <label>What is Veterans Day?</label>
+            <span><input type="radio" name="question43">A holiday to celebrate our Presidents of the past</span>
+            <span><input type="radio" name="question43">A holiday to celebrate our independence from Britain</span>
+            <span><input type="radio" name="question43">A holiday to enjoy all the hard work we have done throughout the year</span>
+            <span><input type="radio" name="question43" id="answer43">A holiday to honor people in the U.S. military</span>
+            <p id="show43"></p>
+        </div>
+        <div class="question">
+            <label>The U.S. Constitution starts with the words "We the People." What does "We the People" mean?</label>
+            <span><input type="radio" name="question44" id="answer44">Self-Government</span>
+            <span><input type="radio" name="question44">Defines Americans</span>
+            <span><input type="radio" name="question44">Lets others know who wrote the constitution</span>
+            <span><input type="radio" name="question44">All of the above</span>
+            <p id="show44"></p>
+        </div>
+        <div class="question">
+            <label>What does the Bill of Rights protect?</label>
+            <span><input type="radio" name="question45">The president from doing wrong</span>
+            <span><input type="radio" name="question45">Americans ability to receive tax breaks</span>
+            <span><input type="radio" name="question45" id="answer45">The basic rights of Americans</span>
+            <span><input type="radio" name="question45">Americans ability to travel wherever they want</span>
+            <p id="show45"></p>
+        </div>
+        <div class="question">
+            <label>There are three branches of government. Why?</label>
+            <span><input type="radio" name="question46">It seemed like a good number</span>
+            <span><input type="radio" name="question46" id="answer46">So one part does not become too powerful</span>
+            <span><input type="radio" name="question46">They wanted to follow the system that other countries were using</span>
+            <span><input type="radio" name="question46">More things can get done with three branches</span>
+            <p id="show46"></p>
+        </div>
+        <div class="question">
+            <label>Who elects U.S. senators?</label>
+            <span><input type="radio" name="question47">Everyone in the country</span>
+            <span><input type="radio" name="question47">Other government officials</span>
+            <span><input type="radio" name="question47" id="answer47">Citizens from their state</span>
+            <span><input type="radio" name="question47">The President picks them</span>
+            <p id="show47"></p>
+        </div>
+        <div class="question">
+            <label>If the president can no longer serve, who becomes president?</label>
+            <span><input type="radio" name="question48">The Secretary of State</span>
+            <span><input type="radio" name="question48">The Speaker of the House</span>
+            <span><input type="radio" name="question48" id="answer48">The Vice President</span>
+            <span><input type="radio" name="question48">A member of Congress</span>
+            <p id="show48"></p>
+        </div>
+        <div class="question">
+            <label>Who appoints federal judges?</label>
+            <span><input type="radio" name="question49">Members of Congress</span>
+            <span><input type="radio" name="question49" id="answer49">The President</span>
+            <span><input type="radio" name="question49">Senators</span>
+            <span><input type="radio" name="question49">Citizens Vote</span>
+            <p id="show49"></p>
+        </div>
+        <div class="question">
+            <label>What does the judicial branch do?</label>
+            <span><input type="radio" name="question50" id="answer50">Reviews and explains laws, resolves disputes and decides if a law goes against the Constitution</span>
+            <span><input type="radio" name="question50">Only reviews laws</span>
+            <span><input type="radio" name="question50">Only explains laws</span>
+            <span><input type="radio" name="question50">Writes laws</span>
+            <p id="show50"></p>
+        </div>
+        <div class="question">
+            <label>Supreme Court Justices serve for life. Why?</label>
+            <span><input type="radio" name="question51" id="answer51">To be independent of politics</span>
+            <span><input type="radio" name="question51">It is easier this way</span>
+            <span><input type="radio" name="question51">So they can make their mark on the country</span>
+            <span><input type="radio" name="question51">All of the above</span>
+            <p id="show51"></p>
+        </div>
+        <div class="question">
+            <label>Name one power that is only for the federal government.</label>
+            <span><input type="radio" name="question52">To incarcerate</span>
+            <span><input type="radio" name="question52">To declare war</span>
+            <span><input type="radio" name="question52">To print money</span>
+            <span><input type="radio" name="question52" id="answer52">B and C</span>
+            <p id="show52"></p>
+        </div>
+        <div class="question">
+            <label>What is the purpose of the 10th Amendment?</label>
+            <span><input type="radio" name="question53">Freedom to bear arms</span>
+            <span><input type="radio" name="question53">Freedom of speech</span>
+            <span><input type="radio" name="question53" id="answer53">It states that the powers not given to the federal government belong to the states or to the people.</span>
+            <span><input type="radio" name="question53">Separation of church and state</span>
+            <p id="show53"></p>
+        </div>
+        <div class="question">
+            <label>Who can vote in federal elections, run for federal office, and serve on a jury in the United States?</label>
+            <span><input type="radio" name="question54" id="answer54">U.S. Citizens</span>
+            <span><input type="radio" name="question54">Anyone in the U.S.</span>
+            <span><input type="radio" name="question54">Anyone in the World</span>
+            <span><input type="radio" name="question54">All of the above</span>
+            <p id="show54"></p>
+        </div>
+        <div class="question">
+            <label>How can people become United States citizens?</label>
+            <span><input type="radio" name="question55">Naturalize</span>
+            <span><input type="radio" name="question55">Derive citizenship</span>
+            <span><input type="radio" name="question55">Be born in the United States</span>
+            <span><input type="radio" name="question55" id="answer55">All of the above</span>
+            <p id="show55"></p>
+        </div>
+        <div class="question">
+            <label>Why is it important to pay federal taxes?</label>
+            <span><input type="radio" name="question56">Required by law</span>
+            <span><input type="radio" name="question56">Civic duty</span>
+            <span><input type="radio" name="question56">Required by the 16th Amendment</span>
+            <span><input type="radio" name="question56" id="answer56">All of the above</span>
+            <p id="show56"></p>
+        </div>
+        <div class="question">
+            <label>What war did the Americans fight to win independence from Britain?</label>
+            <span><input type="radio" name="question57" id="answer57">American Revolution</span>
+            <span><input type="radio" name="question57">Civil War</span>
+            <span><input type="radio" name="question57">World War 2</span>
+            <span><input type="radio" name="question57">World War 1</span>
+            <p id="show57"></p>
+        </div>
+        <div class="question">
+            <label>Name one war fought by the United States in the 1900s.</label>
+            <span><input type="radio" name="question58">The French War</span>
+            <span><input type="radio" name="question58">The Indian War</span>
+            <span><input type="radio" name="question58" id="answer58">World War 1</span>
+            <span><input type="radio" name="question58">All of the above</span>
+            <p id="show58"></p>
+        </div>
+        <div class="question">
+            <label>What was the Great Depression?</label>
+            <span><input type="radio" name="question59">Everyone was sad about the World War that happened</span>
+            <span><input type="radio" name="question59">There was a mental health crisis</span>
+            <span><input type="radio" name="question59" id="answer59">Longest economic recession in modern history</span>
+            <span><input type="radio" name="question59">Florida was sinking into the ocean due to climate change</span>
+            <p id="show59"></p>
+        </div>
+        <div class="question">
+            <label>Who was the United States' main rival during the Cold War?</label>
+            <span><input type="radio" name="question60" id="answer60">Russia</span>
+            <span><input type="radio" name="question60">Germany</span>
+            <span><input type="radio" name="question60">China</span>
+            <span><input type="radio" name="question60">Japan</span>
+            <p id="show60"></p>
+        </div>
+        <div class="question">
+            <label>How many senators does each state have?</label>
+            <span><input type="radio" name="question61">1</span>
+            <span><input type="radio" name="question61">3</span>
+            <span><input type="radio" name="question61">4</span>
+            <span><input type="radio" name="question61" id="answer61">2</span>
+            <p id="show61"></p>
+        </div>
+        <div class="question">
+            <label>Who does a member of the House of Representatives represent?</label>
+            <span><input type="radio" name="question62" id="answer62">Citizens in their district</span>
+            <span><input type="radio" name="question62">Citizens in their state</span>
+            <span><input type="radio" name="question62">The people of the state who belong to their affiliated party</span>
+            <span><input type="radio" name="question62">Everyone in the country</span>
+            <p id="show62"></p>
+        </div>
+        <div class="question">
+            <label>Some states have more representatives than other states. Why?</label>
+            <span><input type="radio" name="question63">Because some states are considered better</span>
+            <span><input type="radio" name="question63" id="answer63">Because some states have more people</span>
+            <span><input type="radio" name="question63">Because states can pick how many representatives they want to send to the house</span>
+            <span><input type="radio" name="question63">None of the above</span>
+            <p id="show63"></p>
+        </div>
+        <div class="question">
+            <label>The President of the United States can serve only two terms. Why?</label>
+            <span><input type="radio" name="question64">Because of the 22nd Amendment</span>
+            <span><input type="radio" name="question64">To keep the President from becoming too powerful</span>
+            <span><input type="radio" name="question64">It is very stressful</span>
+            <span><input type="radio" name="question64" id="answer64">Both A and B</span>
+            <p id="show64"></p>
+        </div>
+        <div class="question">
+            <label>Who signs bills to become laws?</label>
+            <span><input type="radio" name="question65">Member of Congress</span>
+            <span><input type="radio" name="question65">Supreme Court Justices</span>
+            <span><input type="radio" name="question65" id="answer65">The President</span>
+            <span><input type="radio" name="question65">All of the above</span>
+            <p id="show65"></p>
+        </div>
+        <div class="question">
+            <label>How many seats are on the Supreme Court?</label>
+            <span><input type="radio" name="question66">5</span>
+            <span><input type="radio" name="question66" id="answer66">9</span>
+            <span><input type="radio" name="question66">7</span>
+            <span><input type="radio" name="question66">11</span>
+            <p id="show66"></p>
+        </div>
+        <div class="question">
+            <label>Name one power that is only for the states.</label>
+            <span><input type="radio" name="question67">Provide medical care</span>
+            <span><input type="radio" name="question67">Provide transportation</span>
+            <span><input type="radio" name="question67">Provide jobs</span>
+            <span><input type="radio" name="question67" id="answer67">Provide schooling and education</span>
+            <p id="show67"></p>
+        </div>
+        <div class="question">
+            <label>The colonists came to America for many reasons. Name one.</label>
+            <span><input type="radio" name="question68">Political liberty</span>
+            <span><input type="radio" name="question68">Religious freedom</span>
+            <span><input type="radio" name="question68">Economic opportunity</span>
+            <span><input type="radio" name="question68" id="answer68">All of the above</span>
+            <p id="show68"></p>
+        </div>
+        <div class="question">
+            <label>Name the U.S. war between the North and the South.</label>
+            <span><input type="radio" name="question69" id="answer69">The Civil War</span>
+            <span><input type="radio" name="question69">The Union War</span>
+            <span><input type="radio" name="question69">None of the above</span>
+            <span><input type="radio" name="question69">The Confederacy War</span>
+            <p id="show69"></p>
+        </div>
+        <div class="question">
+            <label>Why did the United States enter World War I?</label>
+            <span><input type="radio" name="question70">Germany attacked U.S. civilian ships</span>
+            <span><input type="radio" name="question70">To support the Allied Powers</span>
+            <span><input type="radio" name="question70">To oppose the Central Powers</span>
+            <span><input type="radio" name="question70" id="answer70">All of the above</span>
+            <p id="show70"></p>
+        </div>
+        <div class="question">
+            <label>Who was president during the Great Depression and World War II?</label>
+            <span><input type="radio" name="question71">Theodore Roosevelt</span>
+            <span><input type="radio" name="question71" id="answer71">Franklin Roosevelt</span>
+            <span><input type="radio" name="question71">Herbert Hoover</span>
+            <span><input type="radio" name="question71">John F. Kennedy</span>
+            <p id="show71"></p>
+        </div>
+        <div class="question">
+            <label>Why did the United States enter the Persian Gulf War?</label>
+            <span><input type="radio" name="question72">To secure oil fields</span>
+            <span><input type="radio" name="question72">Because the U.S. is allies with other countries that are fighting</span>
+            <span><input type="radio" name="question72" id="answer72">To force the Iraqi military from Kuwait</span>
+            <span><input type="radio" name="question72">All of the above</span>
+            <p id="show72"></p>
+        </div>
+        <div class="question">
+            <label>Name one U.S. military conflict after the September 11, 2001 attacks.</label>
+            <span><input type="radio" name="question73">All of the above</span>
+            <span><input type="radio" name="question73">The Korean War</span>
+            <span><input type="radio" name="question73">Persian Gulf War</span>
+            <span><input type="radio" name="question73" id="answer73">Global War on Terror</span>
+            <p id="show73"></p>
+        </div>
+        <div class="question">
+            <label>What is the capital of the United States?</label>
+            <span><input type="radio" name="question74">Boston, Massachusetts</span>
+            <span><input type="radio" name="question74">Philadelphia, Pennsylvania</span>
+            <span><input type="radio" name="question74" id="answer74">Washington, DC</span>
+            <span><input type="radio" name="question74">Cleveland, Ohio</span>
+            <p id="show74"></p>
+        </div>
+        <div class="question">
+            <label>The Nations first motto was E Pluribus Unum. What does that mean?</label>
+            <span><input type="radio" name="question75">We are united</span>
+            <span><input type="radio" name="question75" id="answer75">We all become one</span>
+            <span><input type="radio" name="question75">We cannot be stopped</span>
+            <span><input type="radio" name="question75">Together, we are many</span>
+            <p id="show75"></p>
+        </div>
+        <div class="question">
+            <label>What is Memorial Day?</label>
+            <span><input type="radio" name="question76">A holiday to enjoy all the hard work we have done throughout the year</span>
+            <span><input type="radio" name="question76">A holiday to celebrate our Presidents of the past</span>
+            <span><input type="radio" name="question76" id="answer76">A holiday to honor soldiers who died in military service</span>
+            <span><input type="radio" name="question76">A holiday to celebrate our independence from Britain</span>
+            <p id="show76"></p>
+        </div>
+        <div class="question">
+            <label>What founding document said the American colonies were free from Britain?</label>
+            <span><input type="radio" name="question77" id="answer77">Declaration of Independence</span>
+            <span><input type="radio" name="question77">Bill of Rights</span>
+            <span><input type="radio" name="question77">Constitution</span>
+            <span><input type="radio" name="question77">10th Amendment</span>
+            <p id="show77"></p>
+        </div>
+        <div class="question">
+            <label>The words "Life, Liberty, and the pursuit of Happiness" are in what founding document?</label>
+            <span><input type="radio" name="question78">10th Amendment</span>
+            <span><input type="radio" name="question78">Constitution</span>
+            <span><input type="radio" name="question78">Bill of Rights</span>
+            <span><input type="radio" name="question78" id="answer78">Declaration of Independence</span>
+            <p id="show78"></p>
+        </div>
+        <div class="question">
+            <label>Name the three branches of government.</label>
+            <span><input type="radio" name="question79">Executive, Judicial, and Military</span>
+            <span><input type="radio" name="question79">Military, Judicial, and Police</span>
+            <span><input type="radio" name="question79" id="answer79">Executive, Judicial, and Legislative</span>
+            <span><input type="radio" name="question79">Executive, Legislative, and Military</span>
+            <p id="show79"></p>
+        </div>
+        <div class="question">
+            <label>What part of the federal government writes laws?</label>
+            <span><input type="radio" name="question80">Congress</span>
+            <span><input type="radio" name="question80">U.S or National Legislature</span>
+            <span><input type="radio" name="question80">Legislative Branch</span>
+            <span><input type="radio" name="question80" id="answer80">All of the above</span>
+            <p id="show80"></p>
+        </div>
+        <div class="question">
+            <label>How long is a term for a member of the House of Representatives?</label>
+            <span><input type="radio" name="question81" id="answer81">2 years</span>
+            <span><input type="radio" name="question81">3 years</span>
+            <span><input type="radio" name="question81">4 years</span>
+            <span><input type="radio" name="question81">5 years</span>
+            <p id="show81"></p>
+        </div>
+        <div class="question">
+            <label>What does the President's Cabinet do?</label>
+            <span><input type="radio" name="question82">Hires White House employees</span>
+            <span><input type="radio" name="question82">Provides administrative support for the President</span>
+            <span><input type="radio" name="question82" id="answer82">Advises the President</span>
+            <span><input type="radio" name="question82">Writes laws</span>
+            <p id="show82"></p>
+        </div>
+        <div class="question">
+            <label>How many Supreme Court justices are usually needed to decide a case?</label>
+            <span><input type="radio" name="question83">2</span>
+            <span><input type="radio" name="question83" id="answer83">5</span>
+            <span><input type="radio" name="question83">7</span>
+            <span><input type="radio" name="question83">9</span>
+            <p id="show83"></p>
+        </div>
+        <div class="question">
+            <label>How long do Supreme Court justices serve?</label>
+            <span><input type="radio" name="question84">4 years</span>
+            <span><input type="radio" name="question84">8 years</span>
+            <span><input type="radio" name="question84" id="answer84">For life</span>
+            <span><input type="radio" name="question84">2 years</span>
+            <p id="show84"></p>
+        </div>
+        <div class="question">
+            <label>What is one way Americans can serve their country?</label>
+            <span><input type="radio" name="question85">Vote</span>
+            <span><input type="radio" name="question85">Pay taxes</span>
+            <span><input type="radio" name="question85">Serve in the military</span>
+            <span><input type="radio" name="question85" id="answer85">All of the above</span>
+            <p id="show85"></p>
+        </div>
+        <div class="question">
+            <label>Name one war fought by the United States in the 1800s.</label>
+            <span><input type="radio" name="question86">First World War</span>
+            <span><input type="radio" name="question86">Civil War</span>
+            <span><input type="radio" name="question86">Mexican-American War</span>
+            <span><input type="radio" name="question86" id="answer86">Both B and C</span>
+            <p id="show86"></p>
+        </div>
+        <div class="question">
+            <label>What did the Emancipation Proclamation do?</label>
+            <span><input type="radio" name="question87" id="answer87">Freed slaves</span>
+            <span><input type="radio" name="question87">Declared war on the South</span>
+            <span><input type="radio" name="question87">Proclaimed the Union’s independence from the Confederacy</span>
+            <span><input type="radio" name="question87">All of the above</span>
+            <p id="show87"></p>
+        </div>
+        <div class="question">
+            <label>When did all men get the right to vote?</label>
+            <span><input type="radio" name="question88" id="answer88">After the Civil War</span>
+            <span><input type="radio" name="question88">After the American Revolution</span>
+            <span><input type="radio" name="question88">After the 4th Amendment</span>
+            <span><input type="radio" name="question88">All of the above</span>
+            <p id="show88"></p>
+        </div>
+        <div class="question">
+            <label>Why did the United States enter World War II?</label>
+            <span><input type="radio" name="question89">To support the Allied Powers</span>
+            <span><input type="radio" name="question89" id="answer89">To oppose the Axis Powers</span>
+            <span><input type="radio" name="question89">Bombing of Pearl Harbor</span>
+            <p id="show89"></p>
+        </div>
+        <div class="question">
+            <label>During the Cold War, what was one main concern of the United States?</label>
+            <input type="radio" name="question90">Socialism</span>
+            <input type="radio" name="question90" id="answer90">Communism</span>
+            <input type="radio" name="question90">Slavery</span>
+            <input type="radio" name="question90">Civil rights</span>
+            <p id="show90"></p>
+        </div>
+        <div class="question">
+            <label>Why did the United States enter the Vietnam War?</label>
+            <span><input type="radio" name="question91" id="answer91">To stop the spread of communism</span>
+            <span><input type="radio" name="question91">To stop the spread of socialism</span>
+            <span><input type="radio" name="question91">To make sure their territories were safe</span>
+            <span><input type="radio" name="question91">All of the above</span>
+            <p id="show91"></p>
+        </div>
+        <div class="question">
+            <label>Name one American Indian tribe in the United States.</label>
+            <span><input type="radio" name="question92" id="answer92">Cherokee</span>
+            <span><input type="radio" name="question92">Aztec</span>
+            <span><input type="radio" name="question92">Mayan</span>
+            <span><input type="radio" name="question92">All of the above</span>
+            <p id="show92"></p>
+        </div>
+        <div class="question">
+            <label>Where is the Statue of Liberty?</label>
+            <span><input type="radio" name="question93" id="answer93">New York</span>
+            <span><input type="radio" name="question93">Washington, D.C.</span>
+            <span><input type="radio" name="question93">Philadelphia</span>
+            <span><input type="radio" name="question93">Los Angeles</span>
+            <p id="show93"></p>
+        </div>
+        <div class="question">
+            <label>Why does the flag have 50 stars?</label>
+            <span><input type="radio" name="question94">For the first 50 presidents</span>
+            <span><input type="radio" name="question94" id="answer94">Because there are 50 states</span>
+            <span><input type="radio" name="question94">For 50 of the top U.S. generals</span>
+            <span><input type="radio" name="question94">For 50 wars fought</span>
+            <p id="show94"></p>
+        </div>
+        <div class="question">
+            <label>What is Independence Day?</label>
+            <span><input type="radio" name="question95">A holiday to celebrate our independence from Britain</span>
+            <span><input type="radio" name="question95">The day we celebrate all of our Presidents</span>
+            <span><input type="radio" name="question95" id="answer95">Both A and B</span>
+            <span><input type="radio" name="question95">The Country's birthday</span>
+            <p id="show95"></p>
+        </div>
+        <div class="question">
+            <label>What is the political party of the President now?</label>
+            <span><input type="radio" name="question96">Republican</span>
+            <span><input type="radio" name="question96" id="answer96">Democratic</span>
+            <span><input type="radio" name="question96">GOP</span>
+            <span><input type="radio" name="question96">Independent</span>
+            <p id="show96"></p>
+        </div>
+        <div class="question">
+            <label>What ocean is on the West Coast of the United States?</label>
+            <span><input type="radio" name="question97" id="answer97">Pacific</span>
+            <span><input type="radio" name="question97">Eastern</span>
+            <span><input type="radio" name="question97">North Sea</span>
+            <span><input type="radio" name="question97">Antarctic</span>
+            <p id="show97"></p>
+        </div>
+        <div class="question">
+            <label>When is the last day you can send in federal income tax forms?</label>
+            <span><input type="radio" name="question98">March 31</span>
+            <span><input type="radio" name="question98">March 15</span>
+            <span><input type="radio" name="question98" id="answer98">April 15</span>
+            <span><input type="radio" name="question98">April 1</span>
+            <p id="show98"></p>
+        </div>
+        <div class="question">
+            <label>When was the Constitution written?</label>
+            <span><input type="radio" name="question99">1774</span>
+            <span><input type="radio" name="question99">1801</span>
+            <span><input type="radio" name="question99" id="answer99">1787</span>
+            <span><input type="radio" name="question99">1877</span>
+            <p id="show99"></p>
+        </div>
+        <div class="question">
+            <label>In what month do we vote for a President?</label>
+            <span><input type="radio" name="question100">April</span>
+            <span><input type="radio" name="question100">December</span>
+            <span><input type="radio" name="question100" id="answer100">November</span>
+            <span><input type="radio" name="question100">January</span>
+            <p id="show100"></p>
+        </div>
+        
+        <button id="btn">Complete</button>
+
+        <p id="show"></p>
+    </form>
+
+
+    <hr>
+    <h2>Civics Test – Flash Cards</h2>
+<section>
+    
+    <div id="container">
+        <button id="end">Start</button>
+        <p id="p"></p>
+    </div>
+</section>
+
+<button id="myBtn" title="Go to top">&uarr;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
