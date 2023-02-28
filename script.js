@@ -972,13 +972,9 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     myButton.style.display = "block";
-    navbarTitle.style.display = "none";
-    mainLogo.style.display = "none";
     } 
     else {
     myButton.style.display = "none";
-    navbarTitle.style.display = "block";
-    mainLogo.style.display = "block";
     }
 }
 
